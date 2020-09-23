@@ -46,7 +46,7 @@ private __gshared static TypeInfo_Class defaultTraceTypeInfo;
 
 shared static this() {
     defaultTraceTypeInfo = typeid(cast(Object)defaultTraceHandler(null));
-    assert(defaultTraceTypeInfo.name == "core.runtime.defaultTraceHandler.DefaultTraceInfo", defaultTraceTypeInfo.name);
+    assert(defaultTraceTypeInfo.name == "core.runtime.DefaultTraceInfo", defaultTraceTypeInfo.name);
     assert(defaultTraceTypeInfo.initializer.length <= ExcBuf.MAX_TRACEBACK_SIZE);
     assert(DefaultTraceInfoABI.sizeof <= defaultTraceTypeInfo.initializer.length);
     version (unittest) {} else {
